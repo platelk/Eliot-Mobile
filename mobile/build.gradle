@@ -1,0 +1,79 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "org.wecare.eliot"
+        minSdkVersion 21
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    wearApp project(':wear')
+    testCompile 'junit:junit:4.12'
+
+    // Kotlin
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
+
+    // Anko
+    compile 'org.jetbrains.anko:anko-sdk23:0.8.2' // sdk19, sdk21, sdk23 are also available
+    compile 'org.jetbrains.anko:anko-support-v4:0.8.2' // In case you need support-v4 bindings
+    compile 'org.jetbrains.anko:anko-appcompat-v7:0.8.2' // For appcompat-v7 bindings
+
+    // Android
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.android.support:recyclerview-v7:23.2.1'
+
+
+    // OkHttp (needed for retrofit)
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    // Retrofit 2.0.0
+    compile 'com.squareup.retrofit2:retrofit-converters:2.0.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    // Gson
+    compile 'com.google.code.gson:gson:2.6.2'
+    // Picaso
+    compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // Rx libs
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'io.reactivex:rxkotlin:0.55.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-kotlin:0.4.0'
+}
+buildscript {
+    ext.kotlin_version = '1.0.1'
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+repositories {
+    mavenCentral()
+}

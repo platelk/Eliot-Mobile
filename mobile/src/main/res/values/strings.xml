@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Eliot</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- Main Menu -->
+    <string name="main_menu_take_weight">Measure your weight</string>
+    <string name="main_menu_take_pressure">Measure your pressure</string>
+    <string name="main_menu_answer_questions">Answer some questions</string>
+    <string name="title_activity_weight">Weight Mesure</string>
+
+    <!-- Weight -->
+    <string name="info_weight_how_to">To take your weight, click on the number for a manual measure, or on the scale icon for a automatic measure</string>
+    <string name="weight_section_title">Take your weight</string>
+</resources>
