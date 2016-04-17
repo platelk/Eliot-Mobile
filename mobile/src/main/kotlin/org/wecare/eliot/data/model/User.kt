@@ -1,9 +1,10 @@
 package org.wecare.eliot.data.model
 
-/**
- * Created by kevin on 23/03/2016.
- */
-
-data class User(val firstName : String, val lastName : String) {
-
+class User() {
+    var id: Long? = null
+    var name: String? = null
+    var type: String? = null
+    var critical: String? = null
+    var mail: String? = null
+    var mobile: String? = null
 }

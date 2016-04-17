@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Eliot</string>
+
+    <string name="action_settings">Paramètre</string>
+
+    <!-- Main Menu -->
+    <string name="main_menu_take_weight">Mesurez votre poids</string>
+    <string name="main_menu_take_pressure">Mesurez votre tension</string>
+    <string name="main_menu_answer_questions">Répondez à des questions</string>
+    <string name="main_menu_document">Envoyez vos document</string>
+
+    <!-- Weight -->
+    <string name="title_activity_weight">Mesure de poids</string>
+    <string name="info_weight_how_to">Pour prendre votre poids, rentrez le directement via le champs text ou appuyez sur l\'icons de balance pour utiliser un appareil médicale connecté</string>
+    <string name="weight_section_title">Prenez votre poids</string>
+
+    <!-- Pressure -->
+    <string name="title_activity_pressure">Mesure de tension</string>
+    <string name="info_pressure_how_to">Pour prendre votre tension, rentrez le directement via le champs text ou appuyez sur l\'icons de tensionmètre pour utiliser un appareil médicale connecté</string>
+    <string name="pressure_section_title">Prenez votre tension</string>
+
+
+    <!-- Common -->
+    <string name="send_data">Envoyez</string>
+
+    <!-- Login -->
+    <string name="login">Connectez</string>
+    <string name="username">Nom de compte</string>
+    <string name="password">Mot de passe</string>
+</resources>

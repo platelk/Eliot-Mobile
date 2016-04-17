@@ -1,12 +1,9 @@
 package org.wecare.eliot.data
 
 import rx.Observable
-import java.util.HashMap
+import java.util.*
 import kotlin.reflect.KClass
 
-/**
- * Created by kevin on 24/03/2016.
- */
 open class Repository {
     interface DataProvider<T : Any> {
         fun commit(data : T) : Observable<T>

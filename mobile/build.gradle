@@ -4,7 +4,9 @@ apply plugin: 'kotlin-android-extensions'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    buildToolsVersion "23.0.3"
+
+
 
     defaultConfig {
         applicationId "org.wecare.eliot"
@@ -12,6 +14,9 @@ android {
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
+
+        // Enabling multidex support.
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -21,9 +26,13 @@ android {
     }
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'
+        main.res.srcDirs += 'src/main/res/layout/dashboard'
     }
     dexOptions {
         javaMaxHeapSize "4g"
+    }
+    lintOptions {
+        disable 'InvalidPackage'
     }
 }
 
@@ -42,28 +51,39 @@ dependencies {
     compile 'org.jetbrains.anko:anko-appcompat-v7:0.8.2' // For appcompat-v7 bindings
 
     // Android
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:support-v4:23.2.1'
+    compile 'com.android.support:appcompat-v7:23.3.0'
+    compile 'com.android.support:support-v4:23.3.0'
     compile 'com.google.android.gms:play-services:8.4.0'
-    compile 'com.android.support:design:23.2.1'
-    compile 'com.android.support:cardview-v7:23.2.1'
-    compile 'com.android.support:recyclerview-v7:23.2.1'
-
+    compile 'com.android.support:design:23.3.0'
+    compile 'com.android.support:cardview-v7:23.3.0'
+    compile 'com.android.support:recyclerview-v7:23.3.0'
+    compile 'com.android.support:support-annotations:23.3.0'
+    compile 'com.android.support:multidex:1.0.1'
+    kapt 'com.android.support:support-annotations:23.3.0'
 
     // OkHttp (needed for retrofit)
     compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.2.0'
     // Retrofit 2.0.0
-    compile 'com.squareup.retrofit2:retrofit-converters:2.0.0'
     compile 'com.squareup.retrofit2:retrofit:2.0.0'
+    compile 'com.squareup.retrofit2:retrofit-converters:2.0.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0'
     // Gson
     compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.github.salomonbrys.kotson:kotson:2.2.0'
     // Picaso
     compile 'com.squareup.picasso:picasso:2.5.2'
+    // ButterKnife
+    compile 'com.jakewharton:butterknife:7.0.1'
+    kapt 'com.jakewharton:butterknife:7.0.1'
 
     // Rx libs
     compile 'io.reactivex:rxandroid:1.1.0'
     compile 'io.reactivex:rxkotlin:0.55.0'
     compile 'com.jakewharton.rxbinding:rxbinding-kotlin:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-support-v4-kotlin:0.4.0'
+    compile 'com.jakewharton.rxbinding:rxbinding-appcompat-v7-kotlin:0.4.0'
 }
 buildscript {
     ext.kotlin_version = '1.0.1'
@@ -76,4 +96,8 @@ buildscript {
 }
 repositories {
     mavenCentral()
+}
+
+kapt {
+    generateStubs = true
 }

@@ -1,177 +1,215 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
+    android:layout_width="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res/org.wecare.eliot"
     tools:context="org.wecare.eliot.MainActivity"
-    tools:showIn="@layout/app_bar_main">
+    tools:showIn="@layout/app_bar_main"
+    tools:ignore="ResAuto">
 
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:paddingEnd="@dimen/default_margin"
-        android:paddingStart="@dimen/default_margin"
-        android:orientation="horizontal"
-        >
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:background="@drawable/ic_circle_black"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_margin="@dimen/default_margin"
-            android:src="@drawable/ic_setting_dark"
-            android:tint="@color/colorBackground"
-            android:padding="@dimen/fab_margin"
-            />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center"
-            android:background="@drawable/ic_circle_black"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_margin="@dimen/default_margin"
-            android:src="@drawable/ic_person_black"
-            android:tint="@color/colorBackground"
-            android:padding="@dimen/fab_margin"
-            />
-        <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_weight="5"
+        android:paddingBottom="@dimen/activity_vertical_margin"
         >
-     <!-- Menu Item -->
-    <android.support.v7.widget.CardView
-        android:id="@+id/weightSection"
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/main_menu_card_height"
-        android:background="@color/colorBackground"
-        android:layout_marginBottom="@dimen/main_menu_item_margin"
-        android:elevation="2dp"
-        >
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
             android:orientation="horizontal"
-            >
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_circle_black"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_margin="@dimen/default_margin"
-            android:src="@drawable/ic_scale"
-            android:tint="@color/colorBackground"
-            android:padding="@dimen/fab_margin"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:text="@string/main_menu_take_weight"
-            />
+            android:paddingEnd="@dimen/default_margin"
+            android:paddingStart="@dimen/default_margin">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/default_margin"
+                android:background="@drawable/ic_circle_black"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="@dimen/fab_margin"
+                android:src="@drawable/ic_setting_dark"
+                android:tint="@color/colorBackground" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/default_margin"
+                android:background="@drawable/ic_circle_black"
+                android:backgroundTint="@color/colorPrimary"
+                android:padding="@dimen/fab_margin"
+                android:src="@drawable/ic_person_black"
+                android:tint="@color/colorBackground" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
-    <!-- Menu Item -->
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/main_menu_card_height"
-        android:layout_marginBottom="@dimen/main_menu_item_margin"
-        android:background="@color/colorBackground"
-        android:elevation="2dp"
-        >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            >
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_circle_black"
-            android:backgroundTint="@color/colorAccent"
-            android:layout_margin="@dimen/default_margin"
-            android:src="@drawable/ic_pressure"
-            android:tint="@color/colorBackground"
-            android:padding="@dimen/fab_margin"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:text="@string/main_menu_take_pressure"
-            />
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:orientation="vertical">
+            <!-- Menu Weight -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/weightSection"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_card_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/main_menu_item_margin"
+                android:background="@color/colorBackground"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/default_margin"
+                        android:background="@drawable/ic_circle_black"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:padding="@dimen/fab_margin"
+                        android:src="@drawable/ic_scale"
+                        android:tint="@color/colorBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:text="@string/main_menu_take_weight"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!-- Menu Pressure -->
+            <android.support.v7.widget.CardView
+                android:id="@+id/pressureSection"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_card_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/main_menu_item_margin"
+                android:background="@color/colorBackground"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/default_margin"
+                        android:background="@drawable/ic_circle_black"
+                        android:backgroundTint="@color/colorAccent"
+                        android:padding="@dimen/fab_margin"
+                        android:src="@drawable/ic_pressure"
+                        android:tint="@color/colorBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:text="@string/main_menu_take_pressure"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!-- Menu Answers -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_card_height"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/main_menu_item_margin"
+                android:background="@color/colorBackground"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/default_margin"
+                        android:background="@drawable/ic_circle_black"
+                        android:backgroundTint="@color/colorThird"
+                        android:padding="@dimen/fab_margin"
+                        android:src="@drawable/ic_question_mark"
+                        android:tint="@color/colorBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:text="@string/main_menu_answer_questions"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <!-- Menu Document -->
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_menu_card_height"
+                android:layout_gravity="center"
+                android:background="@color/colorBackground"
+                android:elevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="80dp"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/default_margin"
+                        android:background="@drawable/ic_circle_black"
+                        android:backgroundTint="@color/colorFourth"
+                        android:padding="@dimen/fab_margin"
+                        android:src="@drawable/ic_description_black"
+                        android:tint="@color/colorBackground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="end"
+                        android:gravity="center"
+                        android:text="@string/main_menu_document"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
         </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-    <!-- Menu Item -->
-    <android.support.v7.widget.CardView
-        xmlns:card_view="http://schemas.android.com/apk/res-auto"
-        android:layout_gravity="center"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/main_menu_card_height"
-        android:background="@color/colorBackground"
-        android:elevation="2dp"
-        >
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            >
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_circle_black"
-            android:backgroundTint="@color/colorThird"
-            android:layout_margin="@dimen/default_margin"
-            android:src="@drawable/ic_question_mark"
-            android:tint="@color/colorBackground"
-            android:padding="@dimen/fab_margin"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="end"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="20dp"
-            android:text="@string/main_menu_answer_questions"
-            />
-        </LinearLayout>
-
-    </android.support.v7.widget.CardView>
-
     </LinearLayout>
-</LinearLayout>
+</ScrollView>

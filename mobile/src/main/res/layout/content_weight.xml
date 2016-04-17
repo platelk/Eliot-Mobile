@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="org.wecare.eliot.WeightActivity"
+    tools:context=".weight.WeightActivity"
     android:orientation="vertical"
     tools:showIn="@layout/activity_weight">
     <TextView
@@ -51,7 +51,7 @@
             android:tint="@color/colorBackground"
             />
     </RelativeLayout>
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -59,11 +59,24 @@
         android:padding="@dimen/fab_margin"
         >
         <TextView
+            android:id="@+id/helpText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
+            android:layout_gravity="center|top"
+            android:gravity="center|top"
             android:text="@string/info_weight_how_to"
             />
-    </LinearLayout>
+
+        <Button
+            android:id="@+id/sendAction"
+            android:visibility="invisible"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|top"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/colorBackground"
+            android:text="@string/send_data"
+            />
+    </FrameLayout>
 </LinearLayout>

@@ -10,9 +10,23 @@
     <string name="main_menu_take_weight">Measure your weight</string>
     <string name="main_menu_take_pressure">Measure your pressure</string>
     <string name="main_menu_answer_questions">Answer some questions</string>
-    <string name="title_activity_weight">Weight Mesure</string>
+    <string name="main_menu_document">Upload your document</string>
 
     <!-- Weight -->
+    <string name="title_activity_weight">Weight Measure</string>
     <string name="info_weight_how_to">To take your weight, click on the number for a manual measure, or on the scale icon for a automatic measure</string>
     <string name="weight_section_title">Take your weight</string>
+
+    <!-- Pressure -->
+    <string name="title_activity_pressure">Pressure Measure</string>
+    <string name="info_pressure_how_to">To take your pressure, click on the number for a manual measure, or on the pressure icon for a automatic measure</string>
+    <string name="pressure_section_title">Take your pressure</string>
+
+    <!-- Common -->
+    <string name="send_data">Send</string>
+
+    <!-- Login -->
+    <string name="login">Log in</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
 </resources>
